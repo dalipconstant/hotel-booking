@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 text-gray-800 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-terracotta-600 hover:bg-terracotta-700 text-white font-medium py-2.5 px-5 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply bg-white border border-terracotta-200 text-terracotta-700 hover:bg-terracotta-50 font-medium py-2.5 px-5 rounded-lg transition-all duration-200;
+  }
+  .btn-outline {
+    @apply border-2 border-terracotta-500 text-terracotta-600 hover:bg-terracotta-500 hover:text-white font-medium py-2 px-4 rounded-lg transition-all duration-200;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-cream-200 overflow-hidden transition-shadow hover:shadow-md;
+  }
+  .input-field {
+    @apply w-full px-4 py-2.5 border border-cream-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-terracotta-400 focus:border-transparent bg-white text-gray-800 placeholder-gray-400;
+  }
+  .section-title {
+    @apply font-serif text-3xl md:text-4xl font-semibold text-gray-900;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+}
+
+/* Desktop-optimized sidebar layout */
+@media (min-width: 1024px) {
+  .desktop-sidebar {
+    @apply sticky top-0 h-screen overflow-y-auto;
+  }
+}
+
+/* Mobile bottom nav */
+.mobile-nav {
+  @apply fixed bottom-0 left-0 right-0 bg-white border-t border-cream-200 z-50 lg:hidden;
+}
